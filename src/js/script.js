@@ -15,7 +15,7 @@ let guess = Math.floor((Math.random() * 20) + 1);
 //?functions...
 
 const checkBtnHandler = (e) => {
-  const scoreValue = scores.textContent = (score--) - 1
+  
   errorMessage.style.display = 'none';
   e.preventDefault();
   if (inputCheck.value === '') {
@@ -23,6 +23,7 @@ const checkBtnHandler = (e) => {
     errorMessage.style.display = 'block';
 
   } else {
+    const scoreValue = scores.textContent = (score--) - 1
     errorMessage.style.display = 'none'
     if (guess === +inputCheck.value) {
       boxconsole.innerHTML = '';
