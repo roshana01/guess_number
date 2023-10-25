@@ -1,25 +1,23 @@
 //?Varibale
-
 const checkBtn = document.querySelector('.check');
 const resetBtn = document.querySelector('.reset')
 const inputCheck = document.querySelector('.input_check');
 const boxconsole = document.querySelector('.box-Log');
 const scores = document.querySelector('.score');
 const HighScores = document.querySelector('.HighScore');
-const errorMessage = document.querySelector('#error-message')
-//?functions
-
-let score = 19;
+const errorMessage = document.querySelector('#error-message');
+//?Varible default
+let score = 20;
+console.log(score);
 let HighScore = 0;
+//number random 1 and 20
 let guess = Math.floor((Math.random() * 20) + 1);
-console.log(guess); //number random 1 and 20
+//?functions...
 
 const checkBtnHandler = (e) => {
-  const scoreValue = scores.textContent = score--
+  const scoreValue = scores.textContent = (score--) - 1
   errorMessage.style.display = 'none';
-
-  e.preventDefault()
-
+  e.preventDefault();
   if (inputCheck.value === '') {
     //* Error handler code
     errorMessage.style.display = 'block';
@@ -38,27 +36,28 @@ const checkBtnHandler = (e) => {
 
     } else if (guess <= +inputCheck.value) {
       const html = `
-      <h1>📈You guess of ${inputCheck.value} is <span class="font-bold">too high!</span></h1>`
+      <h1>📈You guess of ${inputCheck.value} is <span class="font-bold">too high!</span></h1>`;
       boxconsole.insertAdjacentHTML('beforeend', html);
-      boxconsole.classList.remove('style')
-
+      boxconsole.classList.remove('style');
     } else {
       const html = `
-      <h1>📉 You guess of ${inputCheck.value} is <span class="font-bold">too low!</span></h1>`
+      <h1>📉 You guess of ${inputCheck.value} is <span class="font-bold">too low!</span></h1>`;
       boxconsole.insertAdjacentHTML('beforeend', html);
-      boxconsole.classList.remove('style')
+      boxconsole.classList.remove('style');
 
     }
   }
 }
 
 const resetBtnHandler = () => {
-   guess = Math.floor((Math.random() * 20) + 1);
+  guess = Math.floor((Math.random() * 20) + 1);
+  score = 20;
   inputCheck.value = '';
   boxconsole.innerHTML = '';
-  scores.textContent = 20;
+  scores.textContent = score;
+  console.log(score);
   HighScores.textContent = 0;
-  checkBtn.disabled = false
+  checkBtn.disabled = false;
 }
 
 //?event
