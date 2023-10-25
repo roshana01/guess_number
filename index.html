@@ -4,35 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <link rel="stylesheet" href="./dist/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2? 
-    family=Playpen+Sans:wght@300;400&display=swap"
+      family=Playpen+Sans:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="./public/img/img.png" />
+    <script defer src="./src/js/script.js"></script>
   </head>
   <body>
-    <div class="container w-full h-[100vh] bg-gradient-to-r from-purple-500 to-blue-500">
+    <div
+      class="container w-full h-[100vh] bg-gradient-to-r from-purple-500 to-blue-500"
+    >
       <div class="header pt-6 pb-3 mx-20">
         <div class="nav flex justify-between items-center">
-          <button class="bg-purple-700 py-2 px-6 rounded-md text-gray-50 shadow-xl">Aagain!</button>
-          <h2 class=" text-gray-50 text-md">Between 1 and 20</h2>
+          <button
+            class="bg-purple-700 py-2 px-6 rounded-md text-gray-50 shadow-xl"
+          >
+            Aagain!
+          </button>
+          <h2 class="text-gray-50 text-md">Between 1 and 20</h2>
         </div>
       </div>
-      <h1 class="text-4xl font-bold text-center mt-4 ">Guess The Number! 🤖</h1>
+      <h1 class="text-4xl font-bold text-center mt-4">Guess The Number! 🤖</h1>
 
-      <div class="landing_image flex justify-center mt-8" >
-        <img src="./public/img/imag (7).png" alt="" class="w-80 h-72 shadow-2xl" />
+      <div class="landing_image flex justify-center mt-8">
+        <img
+          src="./public/img/imag (7).png"
+          alt=""
+          class="w-80 h-72 shadow-2xl"
+        />
       </div>
       <div class="flex justify-between items-center mt-5">
-        <div class="body_guess w-56 ml-11 mt-10">
+        <div class="body_guess w-56 ml-11 mt-6">
           <div class="">
-            <input type="number" class="bg-gray-200 w-52 h-24 rounded-md text-center text-5xl" />
+            <input
+              type="number"
+              class="input_check bg-gray-200 w-52 h-24 rounded-md text-center text-5xl"
+              min="1"
+              max="20"
+            />
           </div>
           <button
-            class="bg-purple-800 py-4 px-12 rounded-md mt-10 mx-4 text-xl text-gray-50 shadow-xl"
+            class="check bg-purple-800 py-4 px-12 rounded-md mt-10 mx-4 text-xl text-gray-50 shadow-xl"
           >
             Check !
           </button>
@@ -40,15 +58,14 @@
 
         <!-- list  -->
         <div
-          class="bg-gray-200 p-5 w-[580px] h-[330px] flex flex-col gap-y-5 items-center text-xl overflow-auto rounded-lg"
+          class=" box-Log bg-gray-200 p-5 w-[580px] h-[330px] flex flex-col gap-y-5 items-center text-xl overflow-auto rounded-lg"
         >
-          <h1>📉You guess of 15 is <span class="font-bold">too low!</span></h1>
-          <h1>📈You guess of 6 is <span class="font-bold">too high!</span></h1>
+          <!-- <h1>📉You guess of 15 is <span class="font-semibold">too low!</span></h1>
+          <h1>📈You guess of 6 is <span class="font-bold">too high!</span></h1> -->
         </div>
-        <div class=" w-56 mr-11  mb-9 text-2xl font-bold text-gray-50">
-
-          <h2 class="p-2">💯Score : 16</h2>
-          <h2 class="p-2">🥇HighScore : 4</h2>
+        <div class="w-56 mr-11 mb-9 text-2xl font-bold text-gray-50">
+          <h2 class="p-2 score">💯Score :</h2>
+          <h2 class="p-2 HighScore">🥇HighScore : </h2>
         </div>
       </div>
     </div>
