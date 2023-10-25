@@ -23,7 +23,7 @@
       <div class="header pt-6 pb-3 mx-20">
         <div class="nav flex justify-between items-center">
           <button
-            class="bg-purple-700 py-2 px-6 rounded-md text-gray-50 shadow-xl"
+            class="reset bg-purple-700 py-2 px-6 rounded-md text-gray-50 shadow-xl"
           >
             Aagain!
           </button>
@@ -39,8 +39,13 @@
           class="w-80 h-72 shadow-2xl"
         />
       </div>
+
       <div class="flex justify-between items-center mt-5">
         <div class="body_guess w-56 ml-11 mt-6">
+          <h1 id="error-message" class="font-bold text-md mb-2 hidden">
+            ⛔Please enter a number...
+          </h1>
+
           <div class="">
             <input
               type="number"
@@ -58,14 +63,13 @@
 
         <!-- list  -->
         <div
-          class=" box-Log bg-gray-200 p-5 w-[580px] h-[330px] flex flex-col gap-y-5 items-center text-xl overflow-auto rounded-lg"
-        >
-          <!-- <h1>📉You guess of 15 is <span class="font-semibold">too low!</span></h1>
-          <h1>📈You guess of 6 is <span class="font-bold">too high!</span></h1> -->
-        </div>
+          class="box-Log bg-gray-200 p-5 w-[580px] h-[330px] flex flex-col gap-y-5 items-center text-xl overflow-auto rounded-lg relative"
+        ></div>
         <div class="w-56 mr-11 mb-9 text-2xl font-bold text-gray-50">
-          <h2 class="p-2 score">💯Score :</h2>
-          <h2 class="p-2 HighScore">🥇HighScore : </h2>
+          <h2 class="p-2">💯Score :<span class="font-bold score">20</span></h2>
+          <h2 class="p-2">
+            🥇HighScore :<span class="font-bold HighScore">0</span>
+          </h2>
         </div>
       </div>
     </div>
