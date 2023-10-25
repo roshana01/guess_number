@@ -7,3 +7,9 @@
     font-family: 'Playpen Sans', cursive;
   }
 }
+
+.style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
