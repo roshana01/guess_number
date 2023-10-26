@@ -29,7 +29,7 @@ const checkBtnHandler = (e) => {
       boxconsole.innerHTML = '';
       console.log('you fantastic🤩');
       const html = `
-      <span class="text-2xl animate-bounce font-semibold">You Guessd Correct Number${inputCheck.value}✅🤖</span>`
+      <span class="text-lg lg:text-2xl animate-bounce font-semibold">You Guessd Correct Number${inputCheck.value}✅🤖</span>`
       boxconsole.insertAdjacentHTML('beforeend', html);
       boxconsole.classList.add('style');
       HighScores.textContent = scoreValue
