@@ -826,6 +826,10 @@ video {
     margin-left: 2.75rem;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
